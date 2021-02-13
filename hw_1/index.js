@@ -61,9 +61,11 @@ console.log(index);
   */
 
   const newObj = lodash.pick(lodash.create(Object.prototype, data1[1]),['name', 'email'])
+  //второй вариант
+  const obj2 = lodash.omit(lodash.create(Object.prototype, data1[1]),'age')
 
   console.log(newObj);
-
+  console.log(obj2);
   /**
    * task 4
    * Суперзадание - как выполнить задачу 3 без библиотек, а только средствами javascript ? ( Иммутабельно, не используя delete )
