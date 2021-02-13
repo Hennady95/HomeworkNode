@@ -33,8 +33,6 @@ const data1 = [
       "email": "j.dink@erw.com",
     }
   ];
-
-  //let lodash = requier('.lodash')
   
   const lodash = require('lodash')
 /**
@@ -42,7 +40,7 @@ const data1 = [
 Нужно найти и сохранить в переменную индекс пользователя в массиве data1, у которого возраст равен 23 года.
 */
 
-let index = lodash.findIndex(data1, function(item){ return item.age === 23})
+let index = lodash.findIndex(data1,item => item.age === 23)
 
 console.log(index);
 
@@ -60,11 +58,8 @@ console.log(index);
   * Взять любой объект из любого массива и на его основе создать новый объект, но выкинув из него поле “age”. Опять же нужно использовать функцию из библиотеки lodash. 
   */
 
-  const newObj = lodash.pick(lodash.create(Object.prototype, data1[1]),['name', 'email'])
-  //второй вариант
   const obj2 = lodash.omit(lodash.create(Object.prototype, data1[1]),'age')
 
-  console.log(newObj);
   console.log(obj2);
   /**
    * task 4
