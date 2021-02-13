@@ -76,4 +76,7 @@ console.log(index);
 
    let firstObject = new UserObject(data2[1])
 
+   let {age, ...secondObject} = data2[1]//верное решение
+ 
    console.log(firstObject);
+   console.log(secondObject);
